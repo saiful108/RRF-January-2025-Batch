@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class-4</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: #39b3af;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav ul{
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li{
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        main{
+            padding: 20px;
+        }
+        footer{
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* main */
+
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+           
+            justify-content: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .sidebar-left{
+            width: 15%;
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+        .sidebar-left ul li a{
+            text-decoration: none;
+            color: #0d0202;
+            font-size: x-large;
+            font-weight: bold;
+        }
+        /* .content{
+            width: 50%;
+            background-color: #f9f9f9;
+            padding: 10px;
+        } */
+        .sidebar-right{
+            width: 15%;
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+
+        .newspaper {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #000;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+    }
+
+    .masthead {
+      font-size: 48px;
+      font-weight: bold;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    .date {
+      font-style: italic;
+      color: #666;
+      margin: 10px 0;
+    }
+
+    .main-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+    }
+
+    .lead-story {
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 20px;
+    }
+
+    .headline {
+      font-size: 32px;
+      margin: 0 0 15px 0;
+      line-height: 1.2;
+    }
+
+    .subheading {
+      font-size: 20px;
+      color: #444;
+      margin: 0 0 15px 0;
+      font-weight: normal;
+      line-height: 1.4;
+    }
+
+    .byline {
+      font-style: italic;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .article-content {
+      font-size: 16px;
+      line-height: 1.6;
+      columns: 2;
+      column-gap: 40px;
+    }
+
+    .sidebar {
+      border-left: 1px solid #ddd;
+      padding-left: 30px;
+    }
+
+    .sidebar-story {
+      margin-bottom: 30px;
+    }
+
+    .sidebar-headline {
+      font-size: 24px;
+      margin: 0 0 10px 0;
+    }
+
+    .quote-box {
+      background: #f9f9f9;
+      padding: 20px;
+      border-left: 4px solid #333;
+      margin: 20px 0;
+    }
+
+    .quote {
+      font-size: 20px;
+      font-style: italic;
+      margin: 0 0 10px 0;
+    }
+
+    .quote-author {
+      font-weight: bold;
+      color: #666;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+    }
+
+    .nav-sidebar {
+      width: 280px;
+      height: 100vh;
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: 20px 0;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    }
+
+    .nav-header {
+      padding: 0 20px 20px;
+      border-bottom: 1px solid #333;
+    }
+
+    .nav-header h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+    .nav-categories {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .category {
+      border-bottom: 1px solid #333;
+    }
+
+    .category-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 15px 20px;
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: left;
+      transition: background-color 0.3s;
+    }
+
+    .category-btn:hover {
+      background-color: #333;
+    }
+
+    .category-icon {
+      margin-right: 12px;
+      color: #cc1818;
+    }
+
+    .arrow {
+      transition: transform 0.3s;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .subcategories {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      background-color: #222;
+    }
+
+    .subcategories.active {
+      max-height: 500px;
+    }
+
+    .subcategories a {
+      display: block;
+      padding: 12px 20px 12px 45px;
+      color: #cccccc;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+      font-size: 15px;
+    }
+
+    .subcategories a:hover {
+      background-color: #333;
+      color: #ffffff;
+    }
+
+    .breaking-news {
+      background: #cc1818;
+      padding: 10px 20px;
+      margin: 0 0 20px 0;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       
+        background: #f5f5f5;
+        width: 50%;
+        
+        padding: 10px;
+        
+    }
+
+    .badge {
+      background: #cc1818;
+      color: white;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 12px;
+      margin-left: 8px;
+    }
+
+
+    </style>
+</head>
+<body>
+   <div>
+        <header>
+            <h1 class="masthead">The Daily Chronicle</h1>
+            <div class="date">January 4, 2025</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>  
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+            </nav>
+        </header>
+        <section class="container">
+            <!--left side nav -->
+            <nav class="sidebar-left nav-sidebar">
+                <div class="nav-header">
+                  <h2>News Categories</h2>
+                </div>
+                <div class="breaking-news">Breaking News</div>
+                <ul class="nav-categories">
+                  <li class="category">
+                    <button class="category-btn">
+                      <span>
+                        <span class="category-icon">🌍</span>
+                        World News
+                      </span>
+                      <span class="arrow">▼</span>
+                    </button>
+                    <div class="subcategories">
+                      <a href="#">Europe</a>
+                      <a href="#">Americas</a>
+                      <a href="#">Asia Pacific</a>
+                      <a href="#">Middle East</a>
+                      <a href="#">Africa</a>
+                    </div>
+                  </li>
+                  <li class="category">
+                    <button class="category-btn">
+                      <span>
+                        <span class="category-icon">📈</span>
+                        Business
+                      </span>
+                      <span class="arrow">▼</span>
+                    </button>
+                    <div class="subcategories">
+                      <a href="#">Markets</a>
+                      <a href="#">Economy</a>
+                      <a href="#">Companies</a>
+                      <a href="#">Technology</a>
+                      <a href="#">Startups</a>
+                    </div>
+                  </li>
+                  <li class="category">
+                    <button class="category-btn">
+                      <span>
+                        <span class="category-icon">🏛️</span>
+                        Politics
+                      </span>
+                      <span class="arrow">▼</span>
+                    </button>
+                    <div class="subcategories">
+                      <a href="#">National</a>
+                      <a href="#">International</a>
+                      <a href="#">Elections</a>
+                      <a href="#">Policy</a>
+                    </div>
+                  </li>
+                  <li class="category">
+                    <button class="category-btn">
+                      <span>
+                        <span class="category-icon">🔬</span>
+                        Science & Tech
+                      </span>
+                      <span class="arrow">▼</span>
+                    </button>
+                    <div class="subcategories">
+                      <a href="#">Innovation</a>
+                      <a href="#">Space</a>
+                      <a href="#">Health</a>
+                      <a href="#">Environment</a>
+                      <a href="#">AI & Robotics</a>
+                    </div>
+                  </li>
+                  <li class="category">
+                    <button class="category-btn">
+                      <span>
+                        <span class="category-icon">⚽</span>
+                        Sports <span class="badge">LIVE</span>
+                      </span>
+                      <span class="arrow">▼</span>
+                    </button>
+                    <div class="subcategories">
+                      <a href="#">Football</a>
+                      <a href="#">Basketball</a>
+                      <a href="#">Tennis</a>
+                      <a href="#">Cricket</a>
+                      <a href="#">Formula 1</a>
+                    </div>
+                  </li>
+                  <li class="category">
+                    <button class="category-btn">
+                      <span>
+                        <span class="category-icon">🎭</span>
+                        Entertainment
+                      </span>
+                      <span class="arrow">▼</span>
+                    </button>
+                    <div class="subcategories">
+                      <a href="#">Movies</a>
+                      <a href="#">Music</a>
+                      <a href="#">TV Shows</a>
+                      <a href="#">Celebrity</a>
+                      <a href="#">Arts & Culture</a>
+                    </div>
+                  </li>
+                  <li class="category">
+                    <button class="category-btn">
+                      <span>
+                        <span class="category-icon">💡</span>
+                        Opinion
+                      </span>
+                      <span class="arrow">▼</span>
+                    </button>
+                    <div class="subcategories">
+                      <a href="#">Editorials</a>
+                      <a href="#">Columnists</a>
+                      <a href="#">Letters</a>
+                      <a href="#">Analysis</a>
+                    </div>
+                  </li>
+                  <li class="category">
+                    <button class="category-btn">
+                      <span>
+                        <span class="category-icon">🎓</span>
+                        Education
+                      </span>
+                      <span class="arrow">▼</span>
+                    </button>
+                    <div class="subcategories">
+                      <a href="#">K-12</a>
+                      <a href="#">Higher Education</a>
+                      <a href="#">Learning</a>
+                      <a href="#">Student Life</a>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            <!-- content -->
+            <main class="main-content content">
+                <div class="lead-story">
+                  <h2 class="headline">Breakthrough in Renewable Energy Storage Promises Sustainable Future</h2>
+                  <h3 class="subheading">Scientists develop revolutionary battery technology that could power cities for months</h3>
+                  <div class="byline">By Sarah Johnson | Science & Technology Editor</div>
+                  
+                  <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg" alt="New battery technology demonstration" />
+                  
+                  <div class="article-content">
+                    <p>In a groundbreaking development that could revolutionize how we store and use renewable energy, researchers at the Global Energy Institute have unveiled a new type of battery technology that can store massive amounts of power at a fraction of the current cost.</p>
+                    
+                    <p>The new technology, which uses abundant materials and innovative chemical processes, has shown promising results in initial tests, maintaining high efficiency even after thousands of charge cycles. This breakthrough could finally solve one of the biggest challenges in renewable energy adoption: reliable and cost-effective storage.</p>
+                    
+                    <p>"This is not just an incremental improvement," says Dr. James Chen, lead researcher on the project. "We're talking about a fundamental shift in how we think about energy storage. With this technology, we could potentially power entire cities with renewable energy, even when the sun isn't shining or the wind isn't blowing."</p>
+                    
+                    <p>The implications of this discovery extend far beyond just energy storage. Experts believe this could accelerate the global transition to renewable energy sources, helping combat climate change while creating new economic opportunities in the green energy sector.</p>
+                  </div>
+          
+                  <div class="quote-box">
+                    <p class="quote">"This breakthrough could be the missing piece in our transition to 100% renewable energy. It's not just about storage – it's about creating a sustainable future for generations to come."</p>
+                    <p class="quote-author">- Dr. Elena Rodriguez, Climate Science Institute</p>
+                  </div>
+                </div>
+            </main>
+          
+            <!-- sidebar -->
+             <div class="sidebar-right">
+                <div>
+                    <h2>Recent Posts</h2>
+                <ul>
+                    <li><a href="#">Post 1</a></li>
+                    <li><a href="#">Post 2</a></li>
+                    <li><a href="#">Post 3</a></li>
+                    <li><a href="#">Post 4</a></li>
+                    <li><a href="#">Post 5</a></li>
+                </ul>
+                </div>
+
+                <section>
+                    <h2>Popular Posts</h2>
+                    <ul>
+                        <li><a href="#">Post 1</a></li>
+                        <li><a href="#">Post 2</a></li>
+                        <li><a href="#">Post 3</a></li>
+                        <li><a href="#">Post 4</a></li>
+                        <li><a href="#">Post 5</a></li>
+                    </ul>
+                </section>
+                   <!-- divide by two column -->
+                    <hr style="border: 1px solid #333;">
+                <section class="sidebar-story">
+                    <aside class="sidebar">
+                        <div class="sidebar-story">
+                          <h3 class="sidebar-headline">Global Markets Show Strong Recovery</h3>
+                          <p>Economic indicators point to sustained growth across major markets, with technology and green energy sectors leading the way.</p>
+                        </div>
+                
+                        <div class="sidebar-story">
+                          <h3 class="sidebar-headline">Arts Festival Draws Record Crowds</h3>
+                          <p>The annual Metropolitan Arts Festival saw unprecedented attendance, showcasing works from over 200 international artists.</p>
+                        </div>
+                
+                        <div class="sidebar-story">
+                          <h3 class="sidebar-headline">Sports: Championship Final Set</h3>
+                          <p>After a thrilling semifinal round, the stage is set for what promises to be an historic championship match next weekend.</p>
+                        </div>
+                      </aside>
+                      <hr style="border: 1px solid #333;">
+
+
+
+                <section>
+
+                </section>
+             </div>
+
+        </section>
+        <footer>
+            <p>&copy; 2020 All rights reserved</p>
+   </div>
+    
+</body>
+</html>

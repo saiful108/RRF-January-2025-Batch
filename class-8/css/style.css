@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+h1 {
+  font-family: "Rubik", serif;
+}
+a {
+  text-decoration: none;
+}
+.cream-bg {
+  background-color: #fff9f3;
+  padding-top: 20px;
+}
+.header-wraper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img {
+  width: 100px;
+}
+.menu a {
+  color: #373362;
+  display: block;
+  padding: 10px;
+}
+.menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.header-btn a {
+  color: #463cbd;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+a.border-btn {
+  border: 1px solid;
+}
+.hero-text {
+  text-align: center;
+  margin-top: 50px;
+}
+
+hr {
+  border: 1px solid #e1dcdc;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 {
+  color: #17134a;
+  font-size: 67px;
+  font-weight: 500;
+}
+.hero-text h4 {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: #625f83;
+  font-family: inherit;
+  font-size: 22px;
+}
+
+.hero-text ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+.hero-text ul li {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-text ul svg {
+  width: 20px;
+  margin-right: 10px;
+  color: #544ac2;
+}
+.hero-btn {
+  padding: 20px;
+  background-image: url("https://cdn.dorik.com/5e373b6c43a72a001f56dbf6/61a1f4035bfd7b0011fb92f9/images/button-bg_wqfy1ggx.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 400px;
+}
+
+.hero-btn a {
+  background-color: #3a30ba;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.hero-btn svg {
+  width: 10px;
+}
+
+.featured-on {
+  margin-top: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.featured-on span {
+  color: #544ac2;
+  font-size: 18px;
+  font-weight: 400px;
+}
+
+.featured-on img {
+  width: 97px;
+  height: 35px;
+  /* margin: 0 10px; */
+}
+
+.intro-video {
+  border: 30px solid #e2dde2;
+  max-width: 80%;
+  margin: 50px auto;
+  /*  */
+}
+.in {
+  background-image: url(https://cdn.dorik.com/5e373b6c43a72a001f56dbf6/61a1f4035bfd7b0011fb92f9/images/cms-bg_2b06w496.svg);
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  margin-left: -15px;
+  margin-right: -80px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.intro-video video {
+  max-width: 100%;
+}
+.intro-video,
+.intro-video video {
+  border-radius: 26px;
+}

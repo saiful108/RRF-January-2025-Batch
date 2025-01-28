@@ -1,0 +1,5 @@
+figma_Link:https://www.figma.com/design/oj6YEGcsRZetT8nJeHxdFf/Landing-Page-Kit---Free-13-Landing-Pages-Collection-for-UI-UX-Design-(Community)?node-id=20-6344&t=Zj5Z4sR0xd8GpKvQ-0
+
+dev_Link:https://dev-magnifig.pantheonsite.io/wp-admin/post.php?post=7&action=elementor
+
+live_linK:https://dev-magnifig.pantheonsite.io/landing_page

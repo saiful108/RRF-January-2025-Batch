@@ -1,0 +1,3 @@
+figma_Link:https://www.figma.com/design/oj6YEGcsRZetT8nJeHxdFf/Landing-Page-Kit---Free-13-Landing-Pages-Collection-for-UI-UX-Design-(Community)
+Dev_Link:https://dev-xinder7.pantheonsite.io/wp-admin/post.php?post=7&action=elementor
+Live_Link:https://dev-xinder7.pantheonsite.io/xinder7/
